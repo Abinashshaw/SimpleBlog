@@ -1,0 +1,13 @@
+<ul>
+  <% @post.comments.each do |comment| %>
+    <li>
+      <p>
+        <strong>Commenter:</strong> <%= comment.username %><br>
+        <strong>Body:</strong> <%= comment.body %><br>
+        [ <%= link_to "Delete this comment", post_comment_path(@post, comment), 
+                                            method: :delete,
+                                            data: {confirm: "Are you sure?"} %> ]
+      </p>
+    </li>
+  <% end %>
+</ul>
