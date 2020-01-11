@@ -1,0 +1,15 @@
+<h1>Showing Selected Post</h1>
+
+<p>
+  <label>Title: </label>
+  <%= @post.title %>
+</p>
+<p>
+  <label>Text: </label>
+  <%= @post.text %>
+</p>
+
+<p>
+  <%= link_to "Edit this post", edit_post_path(@post) %> |
+  <%= link_to "Back to listing posts", posts_path %> 
+</p>
